@@ -9,9 +9,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 class ConvexusApplicationTests {
 
 	@Test
-	void contextLoads() {
-		
+	void contextLoads() {		
 		assertTrue(false);
+	}
+	
+	@Test
+	void contextLoads2() {		
+		assertTrue(true);
 	}
 
 }
