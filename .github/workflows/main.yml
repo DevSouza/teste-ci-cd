@@ -7,13 +7,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Baixa uma copia do meu repositorio para o executor
+        # Baixa uma copia do meu repositorio para o executor
       - uses: actions/checkout@v2
         # Configura a versão do JDK
       - name: Configurando versão do JDK 
         uses: actions/setup-java@v1 
         with:
           java-version: 1.14
-
-      - name: Rodando o 
+        # Cache Maven Dependecies
+      - name: Cache Maven
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+        ## Rodando testes
+      - name: Rodando o testes
         run: mvn -B verify --file pom.xml
