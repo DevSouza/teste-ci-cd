@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - oraclejdk14
+script: ./mvnw clean install
+notifications:
+  email:
+    recipients:
+      - devsouza01@gmail.com
+    on_success: never # default: change
+    on_failure: always # default: always
