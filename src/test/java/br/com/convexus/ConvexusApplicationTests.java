@@ -19,5 +19,12 @@ class ConvexusApplicationTests {
 		assertTrue(false);
 		assertTrue(true);
 	}
+	
+	@Test
+	void contextLoads3() {		
+		assertTrue(true);
+		assertTrue(false);
+		assertTrue(true);
+	}
 
 }
