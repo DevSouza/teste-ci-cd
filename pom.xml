@@ -74,8 +74,6 @@
 					<repoToken>ucvkAJxRL3f9D90W4wK2qzFRRX2RE4r0w</repoToken>
 				</configuration>
 			</plugin>
-
-			<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.jacoco</groupId>
