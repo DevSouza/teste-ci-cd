@@ -24,7 +24,7 @@ jobs:
           java-version: 1.14
       
       - name: Install dependencies
-        run: mvn install
+        run: mvn install -DskipTests
 
       - name: Check tests
         run: mvn test jacoco:report coveralls:report
