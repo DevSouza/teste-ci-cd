@@ -7,6 +7,9 @@ install:
 - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+before_install:
+  - chmod +x mvnw
+  
 env:
   global:
     - CODECOV_TOKEN=2b928480-0517-42e9-a4db-04333ac3ac02
