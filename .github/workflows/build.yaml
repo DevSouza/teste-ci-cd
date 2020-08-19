@@ -33,5 +33,4 @@ jobs:
       run: mvn verify -B
 
     - name: Coverage
-      if: github.event_name != 'pull_request'
       run: mvn coveralls:report -B -D repoToken=${{ secrets.COVERALLS_TOKEN }}
