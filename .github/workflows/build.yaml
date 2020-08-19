@@ -33,4 +33,5 @@ jobs:
       run: mvn verify -B
 
     - name: Coverage
-      run: mvn coveralls:report -B -D repoToken=${{ secrets.COVERALLS_TOKEN }}
+      run: mvn clean test jacoco:report coveralls:report
+      
