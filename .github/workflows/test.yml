@@ -27,4 +27,4 @@ jobs:
         run: mvn install
 
       - name: Check tests
-      - run: mvn test jacoco:report coveralls:report
+        run: mvn test jacoco:report coveralls:report
