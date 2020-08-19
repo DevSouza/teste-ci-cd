@@ -1,6 +1,4 @@
 language: java
-jdk:
-- oraclejdk14
 # git strips the wrapper jar file so we have to force its download during the build
 install:
 - mvn -N io.takari:maven:wrapper
